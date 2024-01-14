@@ -1,3 +1,4 @@
 .env
 *.env
 node_modules
+src/models/model-diagram.png
