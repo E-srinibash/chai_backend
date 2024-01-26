@@ -1,13 +1,13 @@
 // require("dotenv").config({path" "./env"})
-import pkg from 'dotenv';
-const dotenv = pkg;
+import app from "./app.js"
+import dotenv from 'dotenv';
 
 // import mongoose from "mongoose"
 // import { DB_NAME } from "./constants"
-import {connectDB} from "./db/index.js"
+import connectDB from "./db/index.js"
 
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 
 
@@ -18,7 +18,9 @@ connectDB()
     })
 })
 .catch((err) =>{
-    console.log("MONGO db connection failed !!");
+    
+
+    console.log("MONGO db connection failed !!",err);
 })
 
 
